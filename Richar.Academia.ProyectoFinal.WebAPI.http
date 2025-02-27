@@ -1,0 +1,6 @@
+@Richar.Academia.ProyectoFinal.WebAPI_HostAddress = http://localhost:5134
+
+GET {{Richar.Academia.ProyectoFinal.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

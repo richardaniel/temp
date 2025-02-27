@@ -1,0 +1,574 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\aprobacionsolicitudes\\aprobacionsolicitudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\aprobacionsolicitudes\\aprobacionsolicitudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\transportistas\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\transportistas\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\sucursales\\dtos\\sucursaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\sucursales\\dtos\\sucursaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\colaboradores\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\colaboradores\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\solicitudesviaje\\solicitudviajeappdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\solicitudesviaje\\solicitudviajeappdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\colaboradores\\dtos\\direcciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\colaboradores\\dtos\\direcciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\_common\\validateemaildomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\_common\\validateemaildomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\solicitudesviaje\\solicitudviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\solicitudesviaje\\solicitudviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\estadosolicitudes\\estadosolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\estadosolicitudes\\estadosolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\detallesviajes\\detalleviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\detallesviajes\\detalleviajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\aprobacionsolicitudes\\aprobacionsolicitudappdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\aprobacionsolicitudes\\aprobacionsolicitudappdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\aprobacionsolicitudes\\aprobacionessolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\aprobacionsolicitudes\\aprobacionessolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\controllers\\transportistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:controllers\\transportistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\controllers\\colaboradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:controllers\\colaboradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\transportistas\\transportistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\transportistas\\transportistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\transportistas\\dtos\\transportistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\transportistas\\dtos\\transportistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\_common\\rutasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\_common\\rutasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\detallesviajes\\detalleviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\detallesviajes\\detalleviaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\viajes\\viajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\viajes\\viajeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\colaboradoressucursales\\colaboradorsucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\colaboradoressucursales\\colaboradorsucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\_common\\mensajesglobales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\_common\\mensajesglobales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\_common\\strategypais\\monedastrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\_common\\strategypais\\monedastrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\_common\\strategypais\\monedastrategyfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\_common\\strategypais\\monedastrategyfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\_common\\strategypais\\imonedastrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\_common\\strategypais\\imonedastrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\controllers\\colaboradorsucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:controllers\\colaboradorsucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\controllers\\aprobacionsolicitudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:controllers\\aprobacionsolicitudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\controllers\\viajecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:controllers\\viajecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\viajes\\dtos\\viajedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\viajes\\dtos\\viajedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\_common\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\_common\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|c:\\users\\rlopez\\desktop\\s3\\richar.academia.proyectofinal.webapi\\_features\\usuarios\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF73CD10-7C20-4CE0-92BB-D29934BC527B}|Richar.Academia.ProyectoFinal.WebAPI.csproj|solutionrelative:_features\\usuarios\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SucursalService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Transportistas\\SucursalService.cs",
+              "RelativeDocumentMoniker": "_Features\\Transportistas\\SucursalService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Transportistas\\SucursalService.cs",
+              "RelativeToolTip": "_Features\\Transportistas\\SucursalService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAewF4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T22:48:36.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SucursalDto.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Sucursales\\Dtos\\SucursalDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Sucursales\\Dtos\\SucursalDto.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Sucursales\\Dtos\\SucursalDto.cs",
+              "RelativeToolTip": "_Features\\Sucursales\\Dtos\\SucursalDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T22:33:07.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SolicitudViajeAppDomain.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\SolicitudesViaje\\SolicitudViajeAppDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\SolicitudesViaje\\SolicitudViajeAppDomain.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\SolicitudesViaje\\SolicitudViajeAppDomain.cs",
+              "RelativeToolTip": "_Features\\SolicitudesViaje\\SolicitudViajeAppDomain.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:49:27.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EstadoSolicitud.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\EstadoSolicitudes\\EstadoSolicitud.cs",
+              "RelativeDocumentMoniker": "_Features\\EstadoSolicitudes\\EstadoSolicitud.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\EstadoSolicitudes\\EstadoSolicitud.cs",
+              "RelativeToolTip": "_Features\\EstadoSolicitudes\\EstadoSolicitud.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:45:41.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AprobacionSolicitudService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\AprobacionSolicitudes\\AprobacionSolicitudService.cs",
+              "RelativeDocumentMoniker": "_Features\\AprobacionSolicitudes\\AprobacionSolicitudService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\AprobacionSolicitudes\\AprobacionSolicitudService.cs",
+              "RelativeToolTip": "_Features\\AprobacionSolicitudes\\AprobacionSolicitudService.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAgwOEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T15:13:36.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SucursalController.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\SucursalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SucursalController.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\SucursalController.cs",
+              "RelativeToolTip": "Controllers\\SucursalController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:25:12.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ColaboradorService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Colaboradores\\ColaboradorService.cs",
+              "RelativeDocumentMoniker": "_Features\\Colaboradores\\ColaboradorService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Colaboradores\\ColaboradorService.cs",
+              "RelativeToolTip": "_Features\\Colaboradores\\ColaboradorService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T22:37:06.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DireccionDto.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Colaboradores\\Dtos\\DireccionDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Colaboradores\\Dtos\\DireccionDto.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Colaboradores\\Dtos\\DireccionDto.cs",
+              "RelativeToolTip": "_Features\\Colaboradores\\Dtos\\DireccionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T21:05:08.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ValidateEmailDomain.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\ValidateEmailDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\ValidateEmailDomain.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\ValidateEmailDomain.cs",
+              "RelativeToolTip": "_Features\\_Common\\ValidateEmailDomain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:56:19.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SolicitudViajeService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\SolicitudesViaje\\SolicitudViajeService.cs",
+              "RelativeDocumentMoniker": "_Features\\SolicitudesViaje\\SolicitudViajeService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\SolicitudesViaje\\SolicitudViajeService.cs",
+              "RelativeToolTip": "_Features\\SolicitudesViaje\\SolicitudViajeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T15:19:53.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAADsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T05:20:24.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AprobacionSolicitudAppDomain.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\AprobacionSolicitudes\\AprobacionSolicitudAppDomain.cs",
+              "RelativeDocumentMoniker": "_Features\\AprobacionSolicitudes\\AprobacionSolicitudAppDomain.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\AprobacionSolicitudes\\AprobacionSolicitudAppDomain.cs",
+              "RelativeToolTip": "_Features\\AprobacionSolicitudes\\AprobacionSolicitudAppDomain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:39:22.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AprobacionesSolicitud.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\AprobacionSolicitudes\\AprobacionesSolicitud.cs",
+              "RelativeDocumentMoniker": "_Features\\AprobacionSolicitudes\\AprobacionesSolicitud.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\AprobacionSolicitudes\\AprobacionesSolicitud.cs",
+              "RelativeToolTip": "_Features\\AprobacionSolicitudes\\AprobacionesSolicitud.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T15:17:40.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TransportistaController.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\TransportistaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransportistaController.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\TransportistaController.cs",
+              "RelativeToolTip": "Controllers\\TransportistaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:19:12.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DetalleViajeService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\DetallesViajes\\DetalleViajeService.cs",
+              "RelativeDocumentMoniker": "_Features\\DetallesViajes\\DetalleViajeService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\DetallesViajes\\DetalleViajeService.cs",
+              "RelativeToolTip": "_Features\\DetallesViajes\\DetalleViajeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T19:07:04.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\LocationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LocationController.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\LocationController.cs",
+              "RelativeToolTip": "Controllers\\LocationController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:17:23.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TransportistaDto.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Transportistas\\Dtos\\TransportistaDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Transportistas\\Dtos\\TransportistaDto.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Transportistas\\Dtos\\TransportistaDto.cs",
+              "RelativeToolTip": "_Features\\Transportistas\\Dtos\\TransportistaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T19:59:24.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RutasService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\RutasService.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\RutasService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\RutasService.cs",
+              "RelativeToolTip": "_Features\\_Common\\RutasService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T17:38:18.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ColaboradorController.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\ColaboradorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ColaboradorController.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\ColaboradorController.cs",
+              "RelativeToolTip": "Controllers\\ColaboradorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T17:15:08.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TransportistaService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Transportistas\\TransportistaService.cs",
+              "RelativeDocumentMoniker": "_Features\\Transportistas\\TransportistaService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Transportistas\\TransportistaService.cs",
+              "RelativeToolTip": "_Features\\Transportistas\\TransportistaService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAxwBUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T17:32:01.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ViajeService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Viajes\\ViajeService.cs",
+              "RelativeDocumentMoniker": "_Features\\Viajes\\ViajeService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Viajes\\ViajeService.cs",
+              "RelativeToolTip": "_Features\\Viajes\\ViajeService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwE4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T05:21:42.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DetalleViaje.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\DetallesViajes\\DetalleViaje.cs",
+              "RelativeDocumentMoniker": "_Features\\DetallesViajes\\DetalleViaje.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\DetallesViajes\\DetalleViaje.cs",
+              "RelativeToolTip": "_Features\\DetallesViajes\\DetalleViaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T19:07:02.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ColaboradorSucursalService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\ColaboradoresSucursales\\ColaboradorSucursalService.cs",
+              "RelativeDocumentMoniker": "_Features\\ColaboradoresSucursales\\ColaboradorSucursalService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\ColaboradoresSucursales\\ColaboradorSucursalService.cs",
+              "RelativeToolTip": "_Features\\ColaboradoresSucursales\\ColaboradorSucursalService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwDwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T17:48:24.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MensajesGlobales.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\MensajesGlobales.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\MensajesGlobales.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\MensajesGlobales.cs",
+              "RelativeToolTip": "_Features\\_Common\\MensajesGlobales.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T17:39:59.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MonedaStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\StrategyPais\\MonedaStrategy.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\StrategyPais\\MonedaStrategy.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\StrategyPais\\MonedaStrategy.cs",
+              "RelativeToolTip": "_Features\\_Common\\StrategyPais\\MonedaStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T14:13:32.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IMonedaStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\StrategyPais\\IMonedaStrategy.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\StrategyPais\\IMonedaStrategy.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\StrategyPais\\IMonedaStrategy.cs",
+              "RelativeToolTip": "_Features\\_Common\\StrategyPais\\IMonedaStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:56:47.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MonedaStrategyFactory.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\StrategyPais\\MonedaStrategyFactory.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\StrategyPais\\MonedaStrategyFactory.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\StrategyPais\\MonedaStrategyFactory.cs",
+              "RelativeToolTip": "_Features\\_Common\\StrategyPais\\MonedaStrategyFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T14:17:27.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ColaboradorSucursalController.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\ColaboradorSucursalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ColaboradorSucursalController.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\ColaboradorSucursalController.cs",
+              "RelativeToolTip": "Controllers\\ColaboradorSucursalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T17:15:10.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ViajeController.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\ViajeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ViajeController.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\ViajeController.cs",
+              "RelativeToolTip": "Controllers\\ViajeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T17:15:01.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-26T14:16:10.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AprobacionSolicitudController.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\AprobacionSolicitudController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AprobacionSolicitudController.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\Controllers\\AprobacionSolicitudController.cs",
+              "RelativeToolTip": "Controllers\\AprobacionSolicitudController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACEAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T15:45:48.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ViajeDto.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Viajes\\Dtos\\ViajeDto.cs",
+              "RelativeDocumentMoniker": "_Features\\Viajes\\Dtos\\ViajeDto.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Viajes\\Dtos\\ViajeDto.cs",
+              "RelativeToolTip": "_Features\\Viajes\\Dtos\\ViajeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T15:50:23.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LocationService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\LocationService.cs",
+              "RelativeDocumentMoniker": "_Features\\_Common\\LocationService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\_Common\\LocationService.cs",
+              "RelativeToolTip": "_Features\\_Common\\LocationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T15:24:04.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Usuarios\\UserService.cs",
+              "RelativeDocumentMoniker": "_Features\\Usuarios\\UserService.cs",
+              "ToolTip": "C:\\Users\\rlopez\\Desktop\\S3\\Richar.Academia.ProyectoFinal.WebAPI\\_Features\\Usuarios\\UserService.cs",
+              "RelativeToolTip": "_Features\\Usuarios\\UserService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T05:20:41.736Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

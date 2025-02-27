@@ -1,0 +1,329 @@
+[
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.AprobacionSolicitudController",
+    "Method": "GestionarSolicitudesViaje",
+    "RelativePath": "api/AprobacionSolicitud/GestionarSolicitudesViaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Collections.Generic.List\u00601[[Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes.Dtos.AprobacionSolicitudDto, Richar.Academia.ProyectoFinal.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.AprobacionSolicitudController",
+    "Method": "GestionarSolicitudViaje",
+    "RelativePath": "api/AprobacionSolicitud/GestionarSolicitudViaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes.Dtos.AprobacionSolicitudDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reqest",
+        "Type": "Microsoft.AspNetCore.Identity.Data.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/registro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Usuarios.Dtos.UsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorController",
+    "Method": "CrearColaborador",
+    "RelativePath": "api/Colaborador/CrearColaborador",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "colaborador",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores.Dtos.ColaboradorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorController",
+    "Method": "DesactivarColaborador",
+    "RelativePath": "api/Colaborador/DesactivarColaborador/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorController",
+    "Method": "EditarColaborador",
+    "RelativePath": "api/Colaborador/EditarColaborador/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores.Dtos.EditarColaboradorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorController",
+    "Method": "EliminarColaborador",
+    "RelativePath": "api/Colaborador/EliminarColaborador",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorController",
+    "Method": "ObtenerColaboradorById",
+    "RelativePath": "api/Colaborador/ObtenerColaborador/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorController",
+    "Method": "ObtenerColaboradores",
+    "RelativePath": "api/Colaborador/ObtenerColaboradores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorSucursalController",
+    "Method": "AsignarColaboradorASucursal",
+    "RelativePath": "api/ColaboradorSucursal/AsignarColaboradorASucursal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "colaboradorSucursalDto",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales.Dtos.ColaboradorSucursalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.LocationController",
+    "Method": "CalculateDistance",
+    "RelativePath": "api/Location/calculate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "points",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features._Common.Dtos.Point",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.LocationController",
+    "Method": "CalculateRoute",
+    "RelativePath": "api/Location/calculateRoute",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "points",
+        "Type": "System.Collections.Generic.List\u00601[[Richar.Academia.ProyectoFinal.WebAPI._Features._Common.Dtos.Point, Richar.Academia.ProyectoFinal.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.SolicitudViajesController",
+    "Method": "RegistrarSolicitudViaje",
+    "RelativePath": "api/SolicitudViajes/RegistrarSolicitudViaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.SolicitudesViaje.Dtos.SolicitudViajeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.SucursalController",
+    "Method": "ObtenerSucursales",
+    "RelativePath": "api/Sucursal/ObtenerSucursales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.SucursalController",
+    "Method": "RegistrarSucursal",
+    "RelativePath": "api/Sucursal/RegistrarSucursal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Sucursales.Dtos.SucursalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.TransportistaController",
+    "Method": "RegistrarColaborador",
+    "RelativePath": "api/Transportista/RegistrarTransportista",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Transportistas.Dtos.TransportistaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.UsuarioController",
+    "Method": "Get",
+    "RelativePath": "api/Usuario/ObtenerUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ViajeController",
+    "Method": "ActualizarVoaje",
+    "RelativePath": "api/Viaje/ActualizarViaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Fecha",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ViajeController",
+    "Method": "CrearViaje",
+    "RelativePath": "api/Viaje/CrearViaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "viajeDto",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Viajes.Dtos.ViajeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Richar.Academia.ProyectoFinal.WebAPI.WeatherForecast, Richar.Academia.ProyectoFinal.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
