@@ -4,8 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.Dtos;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores.Dtos;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales.Dtos;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Sucursales;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Sucursales.Dtos;
 
 
 
@@ -80,7 +82,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
                 await _unitOfWork.SaveChangesAsync();
                 await _unitOfWork.CommitAsync();
 
-                return distance.ToString();
+                return $"Colaborador Asignado , la distacia es {distance.ToString()} KM";
             }
             catch (Exception exception)
             {
@@ -89,10 +91,43 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
             }
         }
 
-        public async Task<ErrorOr<string>> ObtenerColaboradoresAsignados()
+        public async Task<ErrorOr<List<ColaboradorAsignadoDto>>> ObtenerColaboradoresAsignados()
         {
+
+            List<ColaboradorAsignadoDto> colaboradores =await  _colaboradorSucursales
+                .AsQueryable()
+                .Include(cs => cs.Colaborador)
+                .Include(cs=>cs.Sucursal)
+                .Select(
+                cs => new ColaboradorAsignadoDto
+                {
+
+                    ColaboradorId = cs.ColaboradorId,
+                    Distancia_vivienda =cs.DistanciaKm,
+                    sucursal = new SucursalDto
+                   {
+                       Nombre = cs.Sucursal.Nombre,
+                       Latitud = cs.Sucursal.Latitud,
+                       Longitud = cs.Sucursal.Longitud,
+                       Direccion = cs.Sucursal.Direccion
+
+
+                   },
+                   colaborador = new ColaboradorDto
+                   {
+                       Nombre = cs.Colaborador.Nombre,
+                       Latitud = cs.Colaborador.Latitud,
+                       Longitud =cs.Colaborador.Longitud,
+                       Email = cs.Colaborador.Email,
+                       
+
+
+
+                   }
+                }
+                ).ToListAsync();
             
-            return "Colaboradores asignados";
+            return colaboradores;
         }
     }
 }

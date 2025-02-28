@@ -4,7 +4,7 @@ using Farsiman.Domain.Core.Standard.Repositories;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.StrategyPais;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes.Dtos;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.SolicitudesViaje;
-
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Viajes;
 using System.Data.Common;
 
 namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
@@ -19,10 +19,12 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
         private readonly IRepository<ColaboradorSucursal> _colaboradorSucursal;
         private readonly IMonedaStrategy _monedaStrategy;
         private readonly AprobacionSolicitudAppDomain _validatorDomain;
+        private readonly ViajeService _viajeService;
 
         public AprobacionSolicitudService(IUnitOfWork unitOfWork,
             IMonedaStrategy monedaStrategy,
-            AprobacionSolicitudAppDomain validator)
+            AprobacionSolicitudAppDomain validator,
+            ViajeService viajeService )
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork), "La unidad de trabajo no puede ser nula");
             _monedaStrategy = monedaStrategy ?? throw new ArgumentNullException(nameof(monedaStrategy), "La estrategia de moneda no puede ser nula");
@@ -32,7 +34,9 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
             _viajes = unitOfWork.Repository<Viaje>();
             _detalleViajes = unitOfWork.Repository<DetalleViaje>();
             _colaboradorSucursal = unitOfWork.Repository<ColaboradorSucursal>();
+            _viajeService = viajeService;
         }
+
 
         public async Task<ErrorOr<string>> GestionarSolicitudViaje(AprobacionSolicitudDto request)
         {
@@ -54,12 +58,21 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
                 if (request.EstadoSolicitudId == 3) // Aprobada
                 {
                     Viaje? viajeExistente = _viajes
-                        .Where(v => v.SucursalId == solicitudviaje.SucursalId && v.FechaViaje.Date == solicitudviaje.FechaSolicitud.Date)
+                        .Where(v => v.SucursalId == solicitudviaje.SucursalId && v.FechaViaje.Date == 
+                        solicitudviaje.FechaSolicitud.Date && v.DistanciaTotalKm<=100)
                         .FirstOrDefault();
 
                     int viajeId;
 
-                    if (viajeExistente == null)
+                    decimal totalDistance = 0;
+                    if(viajeExistente != null)
+                    {
+                        totalDistance = viajeExistente.DistanciaTotalKm;
+                    }
+
+                  
+
+                    if (viajeExistente == null || totalDistance>=100)
                     {
                         int monedaId = _monedaStrategy.GetMonedaID();
                         Viaje nuevoViaje = new Viaje
@@ -106,6 +119,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
                         Fechaactualizacion = DateTime.Now
                     };
 
+                    await _viajeService.ActualizarViajes(DateTime.Now);
                     await _detalleViajes.AddAsync(detalleViaje);
                 }
 
@@ -147,7 +161,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
 
                     solicitudViaje.EstadoSolicitudId = request.EstadoSolicitudId;
 
-                    if (request.EstadoSolicitudId == 3) // Aprobada
+                    if (request.EstadoSolicitudId == 3) 
                     {
                         Viaje? viajeExistente = await _viajes
                             .FirstOrDefaultAsync(v => v.SucursalId == solicitudViaje.SucursalId &&

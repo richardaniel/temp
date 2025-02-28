@@ -33,7 +33,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
         {
             var obtenerSucursalesResult = _sucursalService.ObtenerSucursales();
             return obtenerSucursalesResult.Match(
-                 sucursalesObtenidas => Ok(obtenerSucursalesResult),
+                 sucursalesObtenidas => Ok(obtenerSucursalesResult.Result.Value),
                  error => Problem(error)
                  );
                 

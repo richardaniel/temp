@@ -21,7 +21,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
         {
             var registerSolicitudViajeResult = await _solicitudViajeService.RegistrarSolicitudViaje(request);
             return registerSolicitudViajeResult.Match(
-                solicitudViaje => Ok(registerSolicitudViajeResult),
+                solicitudViaje => Ok(registerSolicitudViajeResult.Value),
                 error => Problem(error)
             );
         }

@@ -175,6 +175,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ColaboradorSucursalController",
+    "Method": "ObtenerColaboradoresAsignados",
+    "RelativePath": "api/ColaboradorSucursal/ObtenerColaboradoresAsignados",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.LocationController",
     "Method": "CalculateDistance",
     "RelativePath": "api/Location/calculate",
@@ -201,6 +211,22 @@
       {
         "Name": "points",
         "Type": "System.Collections.Generic.List\u00601[[Richar.Academia.ProyectoFinal.WebAPI._Features._Common.Dtos.Point, Richar.Academia.ProyectoFinal.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.RolController",
+    "Method": "crearRol",
+    "RelativePath": "api/Rol/crearRol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rolDto",
+        "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Roles.Dtos.RolDto",
         "IsRequired": true
       }
     ],
@@ -302,6 +328,32 @@
         "Name": "viajeDto",
         "Type": "Richar.Academia.ProyectoFinal.WebAPI._Features.Viajes.Dtos.ViajeDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Richar.Academia.ProyectoFinal.WebAPI.Controllers.ViajeController",
+    "Method": "ObtenerReporteTransportista",
+    "RelativePath": "api/Viaje/reporte-transportista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransportistaId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

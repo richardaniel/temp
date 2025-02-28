@@ -181,3 +181,4 @@ C:\Users\rlopez\Desktop\S3\Richar.Academia.ProyectoFinal.WebAPI\bin\Debug\net8.0
 C:\Users\rlopez\Desktop\S3\Richar.Academia.ProyectoFinal.WebAPI\bin\Debug\net8.0\System.Net.Http.Json.dll
 C:\Users\rlopez\Desktop\S3\Richar.Academia.ProyectoFinal.WebAPI\bin\Debug\net8.0\Farsiman.Domain.Core.Standard.dll
 C:\Users\rlopez\Desktop\S3\Richar.Academia.ProyectoFinal.WebAPI\bin\Debug\net8.0\Farsiman.Infraestructure.Core.Entity.Standard.dll
+C:\Users\rlopez\Desktop\S3\Richar.Academia.ProyectoFinal.WebAPI\obj\Debug\net8.0\Richar.Academia.ProyectoFinal.WebAPI.sourcelink.json

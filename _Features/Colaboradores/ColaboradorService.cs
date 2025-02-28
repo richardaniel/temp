@@ -44,17 +44,17 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores
                     Pais = new PaisDto
                     {
                         PaisId = c.Pais.PaisId,
-                        Nombre = c.Pais.Nombre
+                       
                     },
                     Estado = new EstadoDto
                     {
                         EstadoId = c.Estado.EstadoId,
-                        Nombre = c.Estado.Nombre
+                      
                     },
                     Ciudad = new CiudadDto
                     {
                         CiudadId = c.Ciudad.CiudadId,
-                        Nombre = c.Ciudad.Nombre
+                        
                     },
                     Latitud = c.Latitud,
                     Longitud = c.Longitud,

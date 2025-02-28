@@ -17,6 +17,8 @@ using Richar.Academia.ProyectoFinal.WebAPI._Features.Viajes;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Farsiman.Infraestructure.Core.Entity.Standard;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.StrategyPais;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Transportistas;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Roles;
 
 
 
@@ -61,6 +63,10 @@ builder.Services.AddScoped<ColaboradorSucursalAppDomain>();
 builder.Services.AddScoped<ValidateEmailDomain>();
 builder.Services.AddScoped<AprobacionSolicitudAppDomain>();
 builder.Services.AddScoped<SolicitudViajeAppDomain>();
+builder.Services.AddScoped<TransportistaAppDomain>();
+builder.Services.AddScoped<SucursalAppDomain>();
+builder.Services.AddScoped<ViajeAppDomain>();
+
 
 builder.Services.AddSingleton<MonedaStrategyFactory>();
 builder.Services.AddScoped<IMonedaStrategy>(provider =>
@@ -73,24 +79,26 @@ builder.Services.AddScoped<IMonedaStrategy>(provider =>
 
 
 //Infrastructure
-builder.Services.AddAuthentication(options => {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+           .AddJwtBearer(options =>
+           {
+               options.RequireHttpsMetadata = true; 
+               options.SaveToken = true;
+               options.TokenValidationParameters = new TokenValidationParameters
+               {
+                   ValidateIssuer = false,
+                   ValidateAudience = false,
+                   ValidateLifetime = true,
+                   ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+                   ValidAudience = builder.Configuration["JwtSettings:Audience"],
+                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"])),
+               };
+           });
 
-        .AddJwtBearer(options =>
-        {
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true, 
-                ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
-                ValidAudience = builder.Configuration["JwtSettings:Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]))
-            };
-        });
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("AdminO", policy => policy.RequireRole("Gerente de Tienda"));
+//});
 
 builder.Services.AddDbContext<SistemaTransporteContext>(options =>
 {
@@ -114,6 +122,7 @@ builder.Services.AddScoped<ColaboradorSucursalService>();
 builder.Services.AddScoped<SolicitudViajeService>();
 builder.Services.AddScoped<AprobacionSolicitudService>();
 builder.Services.AddScoped<ViajeService>();
+builder.Services.AddScoped<RolService>();
 
 builder.Services.AddScoped<RutasService>();
 builder.Services.AddScoped<IHashPassword, HashPasswordService>();

@@ -51,17 +51,17 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.Usuarios
 
             if (usuario == null)
             {
-                return Error.Failure("Invalid email or password");
+                return Error.Failure("General.Failure", "Invalid email or password");
             }
             string bcryptHash = System.Text.Encoding.UTF8.GetString(usuario.Contrasena);
            
             if (!BCrypt.Net.BCrypt.Verify(request.Password, bcryptHash))
             {
-                return Error.Failure("Invalid email or password");
+                return Error.Failure("General.Failure","Invalid email or password");
             }
 
 
-            Rol rol = _context.Roles.FirstOrDefault(x => x.RolId == usuario.RolId);
+            Rol? rol = _context.Roles.FirstOrDefault(x => x.RolId == usuario.RolId);
 
             return GenerateJwtToken(colaborador.Nombre, colaborador.Email, rol.Nombre);
 

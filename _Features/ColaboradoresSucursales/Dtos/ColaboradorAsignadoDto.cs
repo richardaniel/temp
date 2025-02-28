@@ -1,19 +1,16 @@
-﻿namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales.Dtos
+﻿using Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores.Dtos;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Sucursales.Dtos;
+
+namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales.Dtos
 {
     public class ColaboradorAsignadoDto
     {
         public int ColaboradorId { get; set; }
-        public string NombreColaborador { get; set; } 
+        public decimal Distancia_vivienda { get; set; }
 
-        public int SucursalId { get; set; }
+        public SucursalDto sucursal { get; set; }
 
-        public string NombreSucursal { get; set; }
-
-        public string DistanciaVivienda { get; set; }
-
-        public string DireccionColaborador { get; set; }
-
-        public string DireccionSucursal { get; set; }
+        public ColaboradorDto colaborador {get;set;}
 
     }
 }

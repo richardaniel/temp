@@ -25,7 +25,17 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
             var resultAsignarColaborador = await _colaboradorSucursalService.AsignarColaboradorASucursal(colaboradorSucursalDto);
             return resultAsignarColaborador.Match(
                 colaboradorAsignado => Ok(resultAsignarColaborador.Value),
-                errors =>Problem()
+                errors =>Problem(errors)
+                );
+        }
+
+        [HttpGet("ObtenerColaboradoresAsignados")]
+        public async Task<IActionResult> ObtenerColaboradoresAsignados()
+        {
+            var resultColaboradoresAsignados = await _colaboradorSucursalService.ObtenerColaboradoresAsignados();
+            return resultColaboradoresAsignados.Match(
+                colaboradorAsignado => Ok(resultColaboradoresAsignados.Value),
+                errors => Problem(errors)
                 );
         }
     }

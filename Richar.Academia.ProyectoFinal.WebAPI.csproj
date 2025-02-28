@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="_Features\Transportistas\SucursalService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Infrastructure\Sistema-Transporte\Maps\_Common\" />
     <Folder Include="kubernetes\" />
     <Folder Include="_Features\DetallesViajes\Dtos\" />
     <Folder Include="_Features\Dispositivos\Dtos\" />
     <Folder Include="_Features\Notificaciones\Dtos\" />
-    <Folder Include="_Features\Roles\Dtos\" />
     <Folder Include="_Features\_Common\Entities\" />
   </ItemGroup>
 

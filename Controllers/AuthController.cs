@@ -13,7 +13,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class AuthController : ApiController
     {
         private readonly UserService _userService;
 
@@ -33,7 +33,10 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
         public async Task<IActionResult> Login([FromBody] LoginRequest reqest)
         {
             var result = await _userService.Autenticacion(reqest);
-            return Ok(result.Value);
+            return result.Match(
+                resultadoOk => Ok(result.Value),
+                errors => Problem(errors));
+            
         }
 
 
@@ -42,7 +45,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
         {
 
             var result = await _userService.Registro(request);
-            return Ok();
+            return Ok(result.Value);
         }
     }
 }

@@ -40,9 +40,9 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
                 }
 
                 
-                if (distance > 100) 
+                if (distance > Convert.ToDecimal(50)) 
                 {
-                    return Error.Failure("AsignarColaborador.Failure", "La distancia excede el límite permitido de 100 km.");
+                    return Error.Failure("AsignarColaborador.Failure", "La distancia excede el límite permitido de 50 km.");
                 }
 
                 return distance;

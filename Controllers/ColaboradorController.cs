@@ -24,7 +24,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
             var createColaboradorResult =await _colaboradorService.CrearColaborador(colaborador);
 
             return createColaboradorResult.Match(
-               colaboradorCreado =>Ok(),
+               colaboradorCreado =>Ok(createColaboradorResult.Value),
                errors => Problem(errors) 
            );
         }
