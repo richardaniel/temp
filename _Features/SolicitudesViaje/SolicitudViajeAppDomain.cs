@@ -27,8 +27,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.SolicitudesViaje
             if (request.FechaSolicitud == default(DateTime))
                 return Error.Failure("La fecha de la solicitud debe ser una fecha válida");
 
-            if (request.FechaSolicitud < DateTime.Today)
-                return Error.Failure("La fecha de la solicitud no puede ser anterior a la fecha actual");
+            
 
             return true;
         }

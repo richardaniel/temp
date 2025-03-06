@@ -1,6 +1,7 @@
 ﻿using ErrorOr;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores.Dtos;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Sucursales.Dtos;
 using System.Text.RegularExpressions;
 
 namespace Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores
@@ -11,63 +12,89 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores
     public class ColaboradorAppDomain
     {
         private readonly ValidateEmailDomain _validateEmailDomain;
+        private readonly string errorCodeValidation = "General.Validation";
+        private readonly string errorCodeConflict = "General.Conflict";
+
         public ColaboradorAppDomain(ValidateEmailDomain validateEmailDomain)
         {
             _validateEmailDomain = validateEmailDomain;
         }
 
-        public ErrorOr<bool> ValidateColaboradorForCreation(ColaboradorDto colaborador)
+        public ErrorOr<Colaborador> ValidateColaboradorForCreation(Colaborador colaborador , ColaboradorDomainRequeriment colaboradorDomainRequeriment)
         {
-            var emailValidation = _validateEmailDomain.ValidateEmail(colaborador.Email);
-            if (emailValidation.IsError)
+            var emailValidated = _validateEmailDomain.ValidateEmail(colaborador.Email);
+            
+
+            if (emailValidated.IsError)
             {
-               return emailValidation;
+                return Error.Validation(errorCodeValidation, emailValidated.FirstError.Description);
+            }
+
+            if(colaboradorDomainRequeriment.IsCorreoExiste)
+            {
+                return Error.Conflict(errorCodeConflict, MensajesGlobales.EmailYaExiste);
             }
 
             if (string.IsNullOrEmpty(colaborador.Nombre))
             {
-               return Error.Failure("General.Failure", "El nombre del colaborador es obligatorio.");
+               return Error.Validation(errorCodeValidation, MensajesGlobales.NombreRequerido);
+            }
+
+            if(string.IsNullOrEmpty(colaborador.Apellido))
+            {
+                return Error.Validation(errorCodeValidation, MensajesGlobales.ApellidoRequerido);
+            }
+
+            if(string.IsNullOrEmpty(colaborador.Telefono))
+            {
+                return Error.Validation(errorCodeValidation, MensajesGlobales.TelefonoRequerido);
             }
 
             if (colaborador.Latitud.Equals(0) && colaborador.Longitud.Equals(0))
             {
-               return Error.Failure("General.Failure", "La latitud o Longitud no puede ser cero");
+               return Error.Validation(errorCodeValidation, MensajesGlobales.CoordenadasInvalidas);
             }
 
-            if(colaborador.Pais.PaisId <= 0)
+            if (colaborador.Latitud < -90 || colaborador.Latitud > 90)
+                return Error.Validation(errorCodeValidation,MensajesGlobales.LatitudInvalida );
+
+
+            if (colaborador.Longitud < -180 || colaborador.Longitud > 180)
+                return Error.Validation(errorCodeValidation, MensajesGlobales.LongitudInvalida);
+
+           
+
+
+            if(!colaboradorDomainRequeriment.IsPaisExiste)
             {
-                return Error.Failure("General.Failure", "El pais no puede estar vacio");
-            }
+                return Error.Conflict(errorCodeConflict, MensajesGlobales.ObjetoNoExiste.Replace("@Objeto", "pais"));
 
-            if (colaborador.Estado.EstadoId <= 0)
+            }
+            if (!colaboradorDomainRequeriment.IsEstadoExiste)
+                return Error.Conflict(errorCodeConflict, MensajesGlobales.ObjetoNoExiste.Replace("@Objeto", "estado"));
+
+            if(!colaboradorDomainRequeriment.IsCiudadExiste)
             {
-                return Error.Failure("General.Failure", "El estado no puede estar vacio");
+                return Error.Conflict(errorCodeConflict, MensajesGlobales.ObjetoNoExiste.Replace("@Objeto", "ciudad"));
+            }
+            colaborador.Email = emailValidated.Value;
+            colaborador.Fechaactualizacion = DateTime.Now;
+            colaborador.Fechacreacion = DateTime.Now;
+            colaborador.Activo = true;
+
+            return colaborador;
             }
 
-            if (colaborador.Ciudad.CiudadId <= 0)
+
+        public ErrorOr<string> ValidateColaboradorForUpdate(EditarColaboradorDto colaborador)
+        {
+            var emailValidation = _validateEmailDomain.ValidateEmail(colaborador.Email);
+            if (emailValidation.IsError)
             {
-                return Error.Failure("General.Failure", "La ciudad no puede estar vacia ");
+                return Error.Validation("General.Validation", MensajesGlobales.EmailInvalido);
             }
-
-            return true;
-            }
-            
-
-        public ErrorOr<bool> ValidateColaboradorForUpdate(EditarColaboradorDto colaborador)
-            {
-                var emailValidation = _validateEmailDomain.ValidateEmail(colaborador.Email);
-                if (emailValidation.IsError)
-                {
-                    return emailValidation;
-                }
-
-               
-                return true;
-            }
-    
-    
-        
-
+            return String.Format(MensajesGlobales.EntidadActualizadaCorrectamente,"colaborador");
+        }            
     }
 }
 

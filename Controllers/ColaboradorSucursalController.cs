@@ -19,7 +19,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
         }
 
         [HttpPost("AsignarColaboradorASucursal")]
-        public  async Task<IActionResult> AsignarColaboradorASucursal([FromBody] ColaboradorSucursalDto colaboradorSucursalDto)
+        public  async Task<IActionResult> AsignarColaboradorASucursal([FromBody] ColaboradorSucursalDtoRequest colaboradorSucursalDto)
         {
 
             var resultAsignarColaborador = await _colaboradorSucursalService.AsignarColaboradorASucursal(colaboradorSucursalDto);

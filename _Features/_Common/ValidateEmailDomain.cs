@@ -8,19 +8,19 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features._Common
 
         private const string EmailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
 
-        public ErrorOr<bool> ValidateEmail(string email)
+        public ErrorOr<string> ValidateEmail(string email)
         {
             if (string.IsNullOrEmpty(email))
             {
-                return Error.Failure("General.Failure", "El correo electrónico no puede estar vacío.");
+                return Error.Validation("General.Validation", MensajesGlobales.EmailRequerido);
             }
 
             if (!Regex.IsMatch(email, EmailPattern))
             {
-                return Error.Failure("General.Failure", "El formato del correo electrónico es incorrecto.");
+                return Error.Validation("General.Validation", MensajesGlobales.EmailInvalido);
             }
 
-            return true;
+            return email;
         }
     }
 }

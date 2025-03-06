@@ -20,7 +20,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
             _aprobacionSolicitudService = aprobacionSolicitudService;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("GestionarSolicitudViaje")]
         public async Task<IActionResult> GestionarSolicitudViaje([FromBody]AprobacionSolicitudDto request)
         {
@@ -33,7 +33,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
 
         }
 
-        [Authorize]
+       // [Authorize]
         [HttpPost("GestionarSolicitudesViaje")]
         public async Task<IActionResult> GestionarSolicitudesViaje([FromBody] List<AprobacionSolicitudDto> request)
         {

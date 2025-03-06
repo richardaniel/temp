@@ -38,13 +38,16 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.Transportistas
                
                 var duplicateExists = _transportistaRepository.AsQueryable()
                     .Any(t => t.Nombre == request.Nombre || t.Email == request.Email);
+                
                 if (duplicateExists)
                     return Error.Conflict("Ya existe un transportista con el mismo nombre o email.");
 
                 if (!_paises.AsQueryable().Any(p => p.PaisId == request.PaisId))
                     return Error.NotFound($"No se encontró un país con el ID {request.PaisId}.");
+
                 if (!_estados.AsQueryable().Any(e => e.EstadoId == request.EstadoId))
                     return Error.NotFound($"No se encontró un estado con el ID {request.EstadoId}.");
+
                 if (!_ciudades.AsQueryable().Any(c => c.CiudadId == request.CiudadId))
                     return Error.NotFound($"No se encontró una ciudad con el ID {request.CiudadId}.");
 

@@ -147,17 +147,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ColaboradorDto"
+                "$ref": "#/components/schemas/ColaboradorDtoRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ColaboradorDto"
+                "$ref": "#/components/schemas/ColaboradorDtoRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ColaboradorDto"
+                "$ref": "#/components/schemas/ColaboradorDtoRequest"
               }
             }
           }
@@ -300,17 +300,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ColaboradorSucursalDto"
+                "$ref": "#/components/schemas/ColaboradorSucursalDtoRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ColaboradorSucursalDto"
+                "$ref": "#/components/schemas/ColaboradorSucursalDtoRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ColaboradorSucursalDto"
+                "$ref": "#/components/schemas/ColaboradorSucursalDtoRequest"
               }
             }
           }
@@ -327,6 +327,37 @@
         "tags": [
           "ColaboradorSucursal"
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dispositivos/crearDispositivo": {
+      "post": {
+        "tags": [
+          "Dispositivos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -398,6 +429,30 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notificaciones/enviarNotificacion": {
+      "post": {
+        "tags": [
+          "Notificaciones"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Paises": {
+      "get": {
+        "tags": [
+          "Paises"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -745,7 +800,7 @@
         },
         "additionalProperties": false
       },
-      "ColaboradorDto": {
+      "ColaboradorDtoRequest": {
         "type": "object",
         "properties": {
           "colaboradorId": {
@@ -776,14 +831,17 @@
             "type": "number",
             "format": "double"
           },
-          "pais": {
-            "$ref": "#/components/schemas/PaisDto"
+          "paisId": {
+            "type": "integer",
+            "format": "int32"
           },
-          "estado": {
-            "$ref": "#/components/schemas/EstadoDto"
+          "estadoId": {
+            "type": "integer",
+            "format": "int32"
           },
-          "ciudad": {
-            "$ref": "#/components/schemas/CiudadDto"
+          "ciudadId": {
+            "type": "integer",
+            "format": "int32"
           },
           "activo": {
             "type": "boolean"
@@ -791,7 +849,7 @@
         },
         "additionalProperties": false
       },
-      "ColaboradorSucursalDto": {
+      "ColaboradorSucursalDtoRequest": {
         "type": "object",
         "properties": {
           "colaboradorId": {

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Richar.Academia.ProyectoFinal.WebAPI", "Richar.Academia.ProyectoFinal.WebAPI.csproj", "{FF73CD10-7C20-4CE0-92BB-D29934BC527B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinal.Domain.UnitTest", "..\ProyectoFinal.Domain.UnitTest\ProyectoFinal.Domain.UnitTest.csproj", "{08B7CD84-1009-40FE-81D1-9DB2BD6BDAEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinal.IntegrationTest", "..\ProyectoFinal.IntegrationTest\ProyectoFinal.IntegrationTest.csproj", "{C2C23C1D-0485-49E8-B1F9-7E6DF78BEB1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FF73CD10-7C20-4CE0-92BB-D29934BC527B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF73CD10-7C20-4CE0-92BB-D29934BC527B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF73CD10-7C20-4CE0-92BB-D29934BC527B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B7CD84-1009-40FE-81D1-9DB2BD6BDAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B7CD84-1009-40FE-81D1-9DB2BD6BDAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B7CD84-1009-40FE-81D1-9DB2BD6BDAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B7CD84-1009-40FE-81D1-9DB2BD6BDAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C23C1D-0485-49E8-B1F9-7E6DF78BEB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C23C1D-0485-49E8-B1F9-7E6DF78BEB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C23C1D-0485-49E8-B1F9-7E6DF78BEB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C23C1D-0485-49E8-B1F9-7E6DF78BEB1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

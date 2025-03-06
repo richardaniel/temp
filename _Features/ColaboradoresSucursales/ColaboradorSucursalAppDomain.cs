@@ -10,7 +10,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
     {
         
        
-            public ErrorOr<bool> ValidateAssignment(ColaboradorSucursalDto colaboradorSucursalDto, Colaborador? colaborador, Sucursal? sucursal)
+            public ErrorOr<bool> ValidateAssignment(ColaboradorSucursal colaboradorSucursalDto, Colaborador? colaborador, Sucursal? sucursal)
             {
                 if (colaborador == null || sucursal == null)
                 {

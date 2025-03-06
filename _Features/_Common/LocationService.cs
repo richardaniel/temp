@@ -1,4 +1,5 @@
-﻿using Microsoft.OpenApi.Any;
+﻿using ErrorOr;
+using Microsoft.OpenApi.Any;
 using Newtonsoft.Json;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.Dtos;
 using System;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 namespace Richar.Academia.ProyectoFinal.WebAPI._Features._Common
 {
 
-    public class LocationService
+    public class LocationService:ILocationService
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
@@ -36,6 +37,8 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features._Common
 
             return result;
         }
+
+       
 
         public async Task<DistanceMatrixResponse> GetRouteDistanceKm(List<Point> points)
         {

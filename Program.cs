@@ -19,6 +19,9 @@ using Farsiman.Infraestructure.Core.Entity.Standard;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.StrategyPais;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Transportistas;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Roles;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Notificaciones;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Dispositivos;
+using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.Helpers;
 
 
 
@@ -95,15 +98,50 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                };
            });
 
-//builder.Services.AddAuthorization(options =>
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("GerenteOnly", policy => policy.RequireRole("Gerente de Tienda"));
+});
+
+//builder.Services.AddDbContext<SistemaTransporteContext>(options =>
 //{
-//    options.AddPolicy("AdminO", policy => policy.RequireRole("Gerente de Tienda"));
+//   options.UseSqlServer(builder.Configuration.GetConnectionString("SistemaTransporte"));
 //});
 
-builder.Services.AddDbContext<SistemaTransporteContext>(options =>
+
+
+
+
+
+
+
+
+
+
+var isTesting = builder.Environment.IsEnvironment("Test");
+
+if (!isTesting) // SOLO REGISTRAR SQL SERVER SI NO ESTAMOS EN MODO TEST
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SistemaTransporte"));
-});
+    builder.Services.AddDbContext<SistemaTransporteContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("SistemaTransporte"));
+    });
+
+    builder.Services.AddScoped<IUnitOfWork>(serviceProvider =>
+    {
+        var dbContext = serviceProvider.GetRequiredService<SistemaTransporteContext>();
+        return new UnitOfWork(dbContext);
+    });
+}
+
+
+
+
+
+
+
+
+
 builder.Services.AddScoped<IUnitOfWork>(serviceProvider =>
 {
     var dbContext = serviceProvider.GetRequiredService<SistemaTransporteContext>();
@@ -111,7 +149,9 @@ builder.Services.AddScoped<IUnitOfWork>(serviceProvider =>
 });
 
 
-//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+
 
 
 // Application
@@ -123,10 +163,16 @@ builder.Services.AddScoped<SolicitudViajeService>();
 builder.Services.AddScoped<AprobacionSolicitudService>();
 builder.Services.AddScoped<ViajeService>();
 builder.Services.AddScoped<RolService>();
+builder.Services.AddScoped<NotificacionService>();
+builder.Services.AddScoped<DispositivoService>();
+
+builder.Services.AddScoped<IGenericValidatorService, GenericValidatorService>();
 
 builder.Services.AddScoped<RutasService>();
 builder.Services.AddScoped<IHashPassword, HashPasswordService>();
 builder.Services.AddHttpClient<LocationService>();
+
+
 
 //Maps
 builder.Services.AddAutoMapper(typeof(Program));
@@ -149,3 +195,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+public partial class Program { }

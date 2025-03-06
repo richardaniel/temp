@@ -10,7 +10,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
 
         public SucursalDto sucursal { get; set; }
 
-        public ColaboradorDto colaborador {get;set;}
+        public ColaboradorDtoRequest colaborador {get;set;}
 
     }
 }

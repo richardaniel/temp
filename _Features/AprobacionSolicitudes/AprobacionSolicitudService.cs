@@ -1,10 +1,12 @@
 ﻿
 using ErrorOr;
 using Farsiman.Domain.Core.Standard.Repositories;
+using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.Enums;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common.StrategyPais;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes.Dtos;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.SolicitudesViaje;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Viajes;
+using Richar.Academia.ProyectoFinal.WebAPI._Features.Viajes.Dtos;
 using System.Data.Common;
 
 namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
@@ -26,9 +28,9 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
             AprobacionSolicitudAppDomain validator,
             ViajeService viajeService )
         {
-            _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork), "La unidad de trabajo no puede ser nula");
+            _unitOfWork = unitOfWork;
             _monedaStrategy = monedaStrategy ?? throw new ArgumentNullException(nameof(monedaStrategy), "La estrategia de moneda no puede ser nula");
-            _validatorDomain = validator ?? throw new ArgumentNullException(nameof(validator), "El validador no puede ser nulo");
+            _validatorDomain = validator;
             _aprobacionSolicitud = unitOfWork.Repository<AprobacionesSolicitud>();
             _solicitudViaje = unitOfWork.Repository<SolicitudViaje>();
             _viajes = unitOfWork.Repository<Viaje>();
@@ -48,69 +50,70 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
             {
                 await _unitOfWork.BeginTransactionAsync();
 
-                SolicitudViaje? solicitudviaje = await _solicitudViaje.FirstOrDefaultAsync(x => x.SolicitudViajeId == request.SolicitudId);
+                
+                SolicitudViaje? solicitudviaje = await _solicitudViaje.FirstOrDefaultAsync(
+                    x => x.SolicitudViajeId == request.SolicitudId && x.EstadoSolicitudId == (int)EstadoSolicitudEnum.Pendiente);
+
                 var solicitudValidation = _validatorDomain.ValidateSolicitudViaje(solicitudviaje, request.SolicitudId, request.EstadoSolicitudId);
                 if (solicitudValidation.IsError)
                     return solicitudValidation.FirstError;
 
                 solicitudviaje.EstadoSolicitudId = request.EstadoSolicitudId;
 
-                if (request.EstadoSolicitudId == 3) // Aprobada
+                if (request.EstadoSolicitudId == (int)EstadoSolicitudEnum.Aprobada)
                 {
+                    
                     Viaje? viajeExistente = _viajes
-                        .Where(v => v.SucursalId == solicitudviaje.SucursalId && v.FechaViaje.Date == 
-                        solicitudviaje.FechaSolicitud.Date && v.DistanciaTotalKm<=100)
+                        .Where(v => v.SucursalId == solicitudviaje.SucursalId &&
+                                    v.FechaViaje.Date == solicitudviaje.FechaSolicitud.Date &&
+                                    v.DistanciaTotalKm <= ConstantesViaje.DistanciaMaximaPorViaje)
                         .FirstOrDefault();
 
                     int viajeId;
 
-                    decimal totalDistance = 0;
-                    if(viajeExistente != null)
+                    if (viajeExistente == null || viajeExistente.DistanciaTotalKm >= ConstantesViaje.DistanciaMaximaPorViaje)
                     {
-                        totalDistance = viajeExistente.DistanciaTotalKm;
-                    }
-
-                  
-
-                    if (viajeExistente == null || totalDistance>=100)
-                    {
-                        int monedaId = _monedaStrategy.GetMonedaID();
-                        Viaje nuevoViaje = new Viaje
+                        
+                        var viajeDto = new ViajeDto
                         {
-                            ViajeId = 0,
                             SucursalId = solicitudviaje.SucursalId,
-                            TransportistaId = 2,
-                            FechaViaje = DateTime.Now,
+                            TransportistaId = ConstantesViaje.TransportistaPredeterminadoId,
                             UsuarioRegistroId = request.GerenteId,
-                            Activo = true,
                             DistanciaTotalKm = 0,
-                            CostoTotal = 0,
-                            MonedaId = monedaId,
-                            Fechacreacion = DateTime.Now,
-                            Fechaactualizacion = DateTime.Now
+                            CostoTotal = 0
                         };
 
-                        _viajes.Add(nuevoViaje);
-                        await _unitOfWork.SaveChangesAsync();
-                        viajeId = nuevoViaje.ViajeId;
+                        var resultadoViaje = await _viajeService.CrearViaje(viajeDto);
+                        if (resultadoViaje.IsError)
+                            return resultadoViaje.FirstError;
 
-                        var viajeValidation = _validatorDomain.ValidateViajeCreation(monedaId, viajeId, request.SolicitudId);
-                        if (viajeValidation.IsError)
-                            return viajeValidation.FirstError;
+                       
+                        viajeExistente = _viajes
+                            .Where(v => v.SucursalId == solicitudviaje.SucursalId && v.FechaViaje.Date == DateTime.Now.Date)
+                            .OrderByDescending(v => v.Fechacreacion)
+                            .FirstOrDefault();
+
+                        if (viajeExistente == null)
+                            return Error.Failure("Error al recuperar el viaje recién creado.");
+
+                        viajeId = viajeExistente.ViajeId;
                     }
                     else
                     {
                         viajeId = viajeExistente.ViajeId;
                     }
 
+                    // Validar relación colaborador-sucursal
                     ColaboradorSucursal? colaboradorSucursal = _colaboradorSucursal
-                        .Where(cs => cs.ColaboradorId == solicitudviaje.ColaboradorId && cs.SucursalId == solicitudviaje.SucursalId)
+                        .Where(cs => cs.ColaboradorId == solicitudviaje.ColaboradorId &&
+                                     cs.SucursalId == solicitudviaje.SucursalId)
                         .FirstOrDefault();
 
                     var colaboradorValidation = _validatorDomain.ValidateColaboradorSucursal(colaboradorSucursal, request.SolicitudId);
                     if (colaboradorValidation.IsError)
                         return colaboradorValidation.FirstError;
 
+                    
                     var detalleViaje = new DetalleViaje
                     {
                         ViajeId = viajeId,
@@ -139,6 +142,56 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.AprobacionSolicitudes
                 return Error.Failure("Error inesperado al gestionar la solicitud de viaje", ex.Message);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public async Task<ErrorOr<string>> GestionarSolicitudesViaje(List<AprobacionSolicitudDto> requests)
         {

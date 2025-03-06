@@ -19,7 +19,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
         }
         #region POST
         [HttpPost("CrearColaborador")]
-        public async Task<IActionResult> CrearColaborador([FromBody] ColaboradorDto colaborador)
+        public async Task<IActionResult> CrearColaborador([FromBody] ColaboradorDtoRequest colaborador)
         {
             var createColaboradorResult =await _colaboradorService.CrearColaborador(colaborador);
 
@@ -42,7 +42,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI.Controllers
         [HttpGet("ObtenerColaboradores")]
         public IActionResult ObtenerColaboradores()
         {
-            List <ColaboradorDto> colaboradores = _colaboradorService.ObtenerColaboradores();
+            List <ColaboradorDtoResponse> colaboradores = _colaboradorService.ObtenerColaboradores();
             return Ok(colaboradores);
         }
         #endregion

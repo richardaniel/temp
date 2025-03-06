@@ -1,4 +1,5 @@
-﻿using ErrorOr;
+﻿using AutoMapper;
+using ErrorOr;
 using Farsiman.Domain.Core.Standard.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Richar.Academia.ProyectoFinal.WebAPI._Features._Common;
@@ -8,6 +9,7 @@ using Richar.Academia.ProyectoFinal.WebAPI._Features.Colaboradores.Dtos;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales.Dtos;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Sucursales;
 using Richar.Academia.ProyectoFinal.WebAPI._Features.Sucursales.Dtos;
+using System.Runtime.CompilerServices;
 
 
 
@@ -16,7 +18,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
     public class ColaboradorSucursalService
     {
         private readonly IUnitOfWork _unitOfWork;
-      
+        private readonly IMapper _mapper;
         private readonly LocationService _locationService;
         private readonly ColaboradorSucursalAppDomain _validator;
         private readonly IRepository<Colaborador> _colaboradores;
@@ -26,7 +28,8 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
         public ColaboradorSucursalService(
             IUnitOfWork unitOfWork,
             LocationService locationService,
-            ColaboradorSucursalAppDomain validator)
+            ColaboradorSucursalAppDomain validator,
+            IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _locationService = locationService;
@@ -34,18 +37,21 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
             _colaboradores = unitOfWork.Repository<Colaborador>();
             _sucursales = unitOfWork.Repository<Sucursal>();
             _colaboradorSucursales = unitOfWork.Repository<ColaboradorSucursal>();
+            _mapper = mapper;
         }
 
-        public async Task<ErrorOr<string>> AsignarColaboradorASucursal(ColaboradorSucursalDto colaboradorSucursalDto)
+        public async Task<ErrorOr<string>> AsignarColaboradorASucursal(ColaboradorSucursalDtoRequest colaboradorSucursalDtoRequest)
         {
             try
             {
                
-                Colaborador? colaborador = await _colaboradores.FirstOrDefaultAsync(x => x.ColaboradorId == colaboradorSucursalDto.ColaboradorId);
-                Sucursal? sucursal = await _sucursales.FirstOrDefaultAsync(x => x.SucursalId == colaboradorSucursalDto.SucursalId);
+                Colaborador? colaborador = await _colaboradores.FirstOrDefaultAsync(x => x.ColaboradorId == colaboradorSucursalDtoRequest.ColaboradorId);
+                Sucursal? sucursal = await _sucursales.FirstOrDefaultAsync(x => x.SucursalId == colaboradorSucursalDtoRequest.SucursalId);
 
+
+                ColaboradorSucursal colaboradorSucursal = _mapper.Map<ColaboradorSucursal>(colaboradorSucursalDtoRequest);
                 
-                var assignmentValidation = _validator.ValidateAssignment(colaboradorSucursalDto, colaborador, sucursal);
+                var assignmentValidation = _validator.ValidateAssignment(colaboradorSucursal, colaborador, sucursal);
                 if (assignmentValidation.IsError)
                 {
                     return assignmentValidation.FirstError;
@@ -70,7 +76,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
 
 
                 await _unitOfWork.BeginTransactionAsync();
-                var colaboradorSucursal = new ColaboradorSucursal
+                var newColaboradorSucursal = new ColaboradorSucursal
                 {
                     ColaboradorId = colaborador.ColaboradorId,
                     SucursalId = sucursal.SucursalId,
@@ -78,7 +84,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
                 };
 
                 //_unitOfWork.Repository<ColaboradorSucursales>.Add(colaboradorSucursal);
-                _colaboradorSucursales.Add(colaboradorSucursal);
+                _colaboradorSucursales.Add(newColaboradorSucursal);
                 await _unitOfWork.SaveChangesAsync();
                 await _unitOfWork.CommitAsync();
 
@@ -113,7 +119,7 @@ namespace Richar.Academia.ProyectoFinal.WebAPI._Features.ColaboradoresSucursales
 
 
                    },
-                   colaborador = new ColaboradorDto
+                   colaborador = new ColaboradorDtoRequest
                    {
                        Nombre = cs.Colaborador.Nombre,
                        Latitud = cs.Colaborador.Latitud,
